@@ -1,5 +1,3 @@
-FROM openjdk:latest
-EXPOSE 8089:8003
-ADD target/*.jar /app.jar
-WORKDIR /app
+FROM openjdk:17
+COPY target/*.jar app.jar
 ENTRYPOINT [ "java", "-jar", "/app.jar" ] 
